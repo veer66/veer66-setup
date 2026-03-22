@@ -22,7 +22,7 @@ mkdir -p ~/.config/common-lisp
 
 cat <<EOF > ~/.config/common-lisp/source-registry.conf
 (:source-registry
-     (:tree (:home "Develop/lisp"))
+     (:tree (:home "Developer/lisp"))
      :inherit-configuration)
 EOF
 
