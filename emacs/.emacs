@@ -10,8 +10,9 @@
 
 ;; themes
 (use-package solarized-theme :ensure t)
-(use-package organic-green-theme)
-(load-theme 'solarized-selenized-dark t)
+(use-package organic-green-theme :ensure t)
+;; (load-theme 'solarized-selenized-dark t)
+(load-theme 'organic-green t)
 
 
 (use-package sly
