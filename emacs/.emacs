@@ -39,6 +39,11 @@
   (add-hook 'edn-hook                   #'enable-paredit-mode))
 
 
+;; opencode
+
+(use-package opencode 
+  :vc (:url "https://codeberg.org/sczi/opencode.el.git" :rev :newest)
+  :ensure t)
 
 ;; Vee's
 (use-package coderef
@@ -55,3 +60,9 @@
 (when (and (eq system-type 'darwin) (display-graphic-p))
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'option))
+
+
+;;; Private
+(let ((private-emacs-el (expand-file-name "~/.emacs-private.el")))
+  (when (file-exists-p private-emacs-el)
+    (load-file private-emacs-el)))
