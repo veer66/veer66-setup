@@ -1,5 +1,6 @@
 ;;;; Code: .emacs
 
+(tool-bar-mode -1)
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (set-frame-font "Liberation Mono-16" nil t)
 
