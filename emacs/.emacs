@@ -39,9 +39,10 @@
   (add-hook 'clojure-mode-hook          #'enable-paredit-mode)
   (add-hook 'edn-hook                   #'enable-paredit-mode))
 
+;; TypeScript
+(use-package typescript-mode :ensure t)
 
-;; opencode
-
+;; Opencode
 (use-package opencode 
   :vc (:url "https://codeberg.org/sczi/opencode.el.git" :rev :newest)
   :ensure t)
