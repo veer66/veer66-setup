@@ -42,6 +42,9 @@
 ;; TypeScript
 (use-package typescript-mode :ensure t)
 
+;; Treeemacs
+(use-package treemacs :ensure t)
+
 ;; Opencode
 (use-package opencode 
   :vc (:url "https://codeberg.org/sczi/opencode.el.git" :rev :newest)
