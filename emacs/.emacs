@@ -70,6 +70,9 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'option))
 
+;; set-key
+
+(global-set-key (kbd "<f9>") 'compile)
 
 ;;; Private
 (let ((private-emacs-el (expand-file-name "~/.emacs-private.el")))
