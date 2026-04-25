@@ -40,6 +40,9 @@
   (add-hook 'clojure-mode-hook          #'enable-paredit-mode)
   (add-hook 'edn-hook                   #'enable-paredit-mode))
 
+;; Clojure
+(use-package cider :ensure t)
+
 ;; TypeScript
 (use-package typescript-mode :ensure t)
 
