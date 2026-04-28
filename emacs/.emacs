@@ -71,7 +71,6 @@
   (setq mac-option-modifier 'option))
 
 ;; set-key
-
 (global-set-key (kbd "<f9>") 'compile)
 
 ;;; Private
