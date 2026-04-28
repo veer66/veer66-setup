@@ -54,6 +54,9 @@
   :vc (:url "https://codeberg.org/sczi/opencode.el.git" :rev :newest)
   :ensure t)
 
+;; CSV
+(use-package csv-mode :ensure t)
+
 ;; Vee's
 (use-package coderef
   :vc (:url "https://codeberg.org/veer66/coderef" :rev :newest))
