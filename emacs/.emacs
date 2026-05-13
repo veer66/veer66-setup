@@ -60,6 +60,9 @@
 ;; Terminal
 (use-package eat :ensure t)
 
+;; Slide
+(use-package org-tree-slide :ensure t)
+
 ;; Vee's
 (use-package coderef
   :vc (:url "https://codeberg.org/veer66/coderef" :rev :newest))
