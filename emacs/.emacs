@@ -64,6 +64,9 @@
 (use-package coderef
   :vc (:url "https://codeberg.org/veer66/coderef" :rev :newest))
 
+(use-package ya-sort-lines
+  :vc (:url "https://codeberg.org/veer66/ya-sort-lines" :rev :newest))
+
 (defun kill-all-sly-buffers ()
   (interactive)
   (cl-loop for buffer in (buffer-list)
