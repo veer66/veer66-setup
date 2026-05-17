@@ -1,0 +1,40 @@
+#!/usr/bin/openrc-run
+# Ollama OpenRC init script for Artix Linux
+
+description="Ollama - Run large language models locally"
+extra_started_commands="reload"
+
+: ${OLLAMA_BINARY:=/usr/local/bin/ollama}
+: ${OLLAMA_GROUP:=ollama}
+: ${OLLAMA_HOST:=127.0.0.1:11434}
+: ${OLLAMA_LOG:=/var/log/ollama.log}
+: ${OLLAMA_MODELS:=/var/lib/ollama/models}
+: ${OLLAMA_USER:=ollama}
+
+command="${OLLAMA_BINARY}"
+command_args="serve"
+command_args_foreground=""
+command_user="${OLLAMA_USER}:${OLLAMA_GROUP}"
+supervisor="supervise-daemon"
+output_log="${OLLAMA_LOG}"
+error_log="${OLLAMA_LOG}"
+supervise_daemon_args="--env OLLAMA_HOST=${OLLAMA_HOST} --env OLLAMA_MODELS=${OLLAMA_MODELS}"
+
+depend() {
+	need net
+	use logger
+	after network
+}
+
+start_pre() {
+	checkpath --directory --owner "${OLLAMA_USER}:${OLLAMA_GROUP}" --mode 0755 \
+		/var/lib/ollama /var/lib/ollama/models
+	checkpath --file --owner "${OLLAMA_USER}:${OLLAMA_GROUP}" --mode 0640 \
+		"${OLLAMA_LOG}"
+}
+
+reload() {
+	ebegin "Reloading ${SVCNAME}"
+	${supervisor} ${SVCNAME} --signal HUP --pidfile "${OLLAMA_PIDFILE}"
+	eend $?
+}

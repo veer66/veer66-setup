@@ -1,0 +1,11 @@
+#+TITLE: ollama-openrc
+
+Since the Ollama installer lacks OpenRC support, this package includes OpenRC
+scripts to enable running Ollama.
+
+* Based on
+** https://aur.archlinux.org/packages/ollama-openrc
+
+* License
+** Based on David Cohen <dacohen@pm.me>
+** BSD Zero Clause License (AUR)
