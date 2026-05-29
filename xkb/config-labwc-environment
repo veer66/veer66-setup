@@ -1,0 +1,4 @@
+XKB_DEFAULT_MODEL=pc98
+XKB_DEFAULT_LAYOUT=us,th
+XKB_DEFAULT_VARIANT=
+XKB_DEFAULT_OPTIONS=ctrl:swapcaps,grp:ctrl_space_toggle
