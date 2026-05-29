@@ -1,0 +1,3 @@
+#!/bin/sh
+
+wlr-randr --output HDMI-A-1 --transform normal
