@@ -13,8 +13,8 @@
 ;; themes
 (use-package solarized-theme :ensure t)
 (use-package organic-green-theme :ensure t)
-;; (load-theme 'solarized-selenized-dark t)
-(load-theme 'organic-green t)
+(load-theme 'solarized-selenized-dark t)
+;; (load-theme 'organic-green t)
 
 
 (use-package sly
@@ -43,8 +43,16 @@
 ;; Clojure
 (use-package cider :ensure t)
 
+;; Babashka
+(use-package clojure-mode
+  :mode (("\\.bb\\'" . clojure-mode)
+         ("\\.bbin\\'" . clojure-mode)))
+
 ;; TypeScript
 (use-package typescript-mode :ensure t)
+
+;; Proto
+(use-package protobuf-mode :ensure t)
 
 ;; Treeemacs
 (use-package treemacs :ensure t)
