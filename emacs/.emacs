@@ -3,7 +3,7 @@
 (tool-bar-mode -1)
 (context-menu-mode 1)
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(set-frame-font "Liberation Mono-16" nil t)
+(set-frame-font "JetBrains Mono-16" nil t)
 
 ;; archives
 (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
@@ -54,6 +54,9 @@
 ;; Proto
 (use-package protobuf-mode :ensure t)
 
+;; Rust
+(use-package rust-mode :ensure t)
+
 ;; Treeemacs
 (use-package treemacs :ensure t)
 
@@ -71,9 +74,12 @@
 ;; Slide
 (use-package org-tree-slide :ensure t)
 
+;; Uniline (Drawing)
+(use-package uniline :ensure t)
+
 ;; Vee's
 (use-package coderef
-  :vc (:url "https://codeberg.org/veer66/coderef" :rev :newest))
+  :vc (:url "https://github.com/veer66/coderef" :rev :newest))
 
 (use-package ya-sort-lines
   :vc (:url "https://codeberg.org/veer66/ya-sort-lines" :rev :newest))
