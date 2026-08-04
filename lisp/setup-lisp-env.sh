@@ -1,14 +1,18 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
 rm -rf ~/quicklisp
 rm -f quicklisp.lisp
-wget https://beta.quicklisp.org/quicklisp.lisp
+
+wget https://beta.quicklisp.org/quicklisp.lisp || (echo "Cannot download quicklisp" >&2; exit 1)
+
 sbcl --load quicklisp.lisp \
         --eval '(quicklisp-quickstart:install)' \
         --eval '(ql-util:without-prompting (ql:add-to-init-file))' \
-        --quit
+        --quit \
+	|| (echo "Fail to install quicklisp" >&2; exit 1)
+
 
 rm -f quicklisp.lisp
 
