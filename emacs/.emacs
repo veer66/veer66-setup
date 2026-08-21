@@ -16,6 +16,9 @@
 (load-theme 'solarized-selenized-dark t)
 ;; (load-theme 'organic-green t)
 
+(set-face-attribute 'mode-line nil
+		    :background "#506000"
+		    :foreground "#FFFFFF")
 
 (use-package sly
   :ensure t
