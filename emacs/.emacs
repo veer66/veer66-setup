@@ -104,6 +104,7 @@
 
 ;; set-key
 (global-set-key (kbd "<f9>") 'compile)
+(global-set-key (kbd "C-2") 'set-mark-command)
 
 ;;; Private
 (let ((private-emacs-el (expand-file-name "~/.emacs-private.el")))
