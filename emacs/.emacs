@@ -51,6 +51,9 @@
   :mode (("\\.bb\\'" . clojure-mode)
          ("\\.bbin\\'" . clojure-mode)))
 
+;; Lua
+(use-package lua-mode :ensure t)
+
 ;; TypeScript
 (use-package typescript-mode :ensure t)
 
