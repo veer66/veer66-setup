@@ -1,4 +1,4 @@
-;;;; Code: .emacs
+;;;; Code: .emacs  -*- lexical-binding: t; -*-
 
 (tool-bar-mode -1)
 (context-menu-mode 1)
