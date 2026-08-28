@@ -83,6 +83,9 @@
 ;; Uniline (Drawing)
 (use-package uniline :ensure t)
 
+;; agent-shell
+(use-package agent-shell :ensure t)
+
 ;; Vee's
 (use-package coderef
   :vc (:url "https://github.com/veer66/coderef" :rev :newest))
