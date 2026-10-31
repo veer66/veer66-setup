@@ -2,8 +2,10 @@
 
 (tool-bar-mode -1)
 (context-menu-mode 1)
+(setq speedbar-prefer-window t)
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (set-frame-font "JetBrains Mono-16" nil t)
+
 
 ;; archives
 (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
@@ -86,6 +88,12 @@
 ;; agent-shell
 (use-package agent-shell :ensure t)
 
+;; graphql
+(use-package graphql-mode :ensure t)
+
+;; ttl
+(use-package ttl-mode :ensure t)
+
 ;; Vee's
 (use-package coderef
   :vc (:url "https://github.com/veer66/coderef" :rev :newest))
@@ -108,6 +116,13 @@
 ;; set-key
 (global-set-key (kbd "<f9>") 'compile)
 (global-set-key (kbd "C-2") 'set-mark-command)
+
+;; Use oksh
+
+(let ((oksh-path (locate-file "oksh" '("/opt/homebrew/bin/" "/usr/local/bin"))))
+  (when oksh-path
+    (setenv "SHELL" oksh-path)
+    (setenv "ENV" (getenv "HOME"))))
 
 ;;; Private
 (let ((private-emacs-el (expand-file-name "~/.emacs-private.el")))
