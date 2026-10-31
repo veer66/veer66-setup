@@ -119,7 +119,6 @@
 
 ;; Use oksh
 
-(setenv "TITI" "TATA")
 (let ((oksh-path (locate-file "oksh" '("/opt/homebrew/bin/" "/usr/local/bin"))))
   (when oksh-path
     (setenv "SHELL" oksh-path)
